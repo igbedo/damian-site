@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Damian Igbe, PhD</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="mark"></span><span>Damian Igbe, PhD<small>AI • Cybersecurity • Cloud Operations</small></span></a>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="training.html">Training</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="corporate.html">Corporate</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="instructor.html">Instructors</a>
+        <a class="active btn primary" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container split">
+      <div class="card">
+        <div class="pad">
+          <h1>Contact</h1>
+          <p class="lead" style="margin-top:8px;">
+            Use this form to request the Starter Kit, program details, speaking availability, or corporate enablement.
+          </p>
+
+          <!-- NOTE: This is a static form. Connect it to Formspree / Netlify Forms later. -->
+          <form class="form" action="#" method="post">
+            <input class="input" name="name" placeholder="Full name" required />
+            <input class="input" name="email" type="email" placeholder="Email address" required />
+            <input class="input" name="topic" placeholder="Topic (Starter Kit / Training / Speaking / Corporate)" />
+            <textarea name="message" placeholder="Tell me what you’re looking for…"></textarea>
+            <button class="btn primary" type="submit">Send Message</button>
+            <div class="help">To make this form send emails, connect it to Formspree or Netlify Forms.</div>
+          </form>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="pad">
+          <h2>Quick links</h2>
+          <p><a class="btn" href="training.html">Training</a></p>
+          <p><a class="btn" href="speaking.html">Speaking</a></p>
+          <p><a class="btn" href="corporate.html">Corporate</a></p>
+          <p><a class="btn" href="certifications.html">Certifications</a></p>
+
+          <hr class="sep" />
+          <h2>Message to include (optional)</h2>
+          <p class="help">
+            If you’re a team leader, include team size, primary goals (SOC, cloud reviews, reporting), and your preferred timeframe.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footgrid">
+      <div>© <span id="y"></span> Damian Igbe, PhD</div>
+      <div><a href="index.html">Home</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
