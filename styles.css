@@ -1,15 +1,18 @@
 /* styles.css */
 :root{
-  --bg: #070B18;
-  --panel: rgba(255,255,255,0.06);
-  --panel2: rgba(255,255,255,0.08);
-  --text: rgba(255,255,255,0.92);
-  --muted: rgba(255,255,255,0.70);
-  --muted2: rgba(255,255,255,0.58);
-  --line: rgba(255,255,255,0.14);
+  --bg: #0B1024; /* slightly lighter than #070B18 */
+  --panel: rgba(255,255,255,0.075);
+  --panel2: rgba(255,255,255,0.105);
+
+  --text: rgba(255,255,255,0.94);
+  --muted: rgba(255,255,255,0.78);
+  --muted2: rgba(255,255,255,0.66);
+
+  --line: rgba(255,255,255,0.16);
   --accent: #41C7FF;
   --accent2: #2B6CFF;
-  --shadow: 0 18px 40px rgba(0,0,0,0.45);
+
+  --shadow: 0 18px 40px rgba(0,0,0,0.40);
   --radius: 18px;
   --radius2: 22px;
   --max: 1100px;
@@ -18,12 +21,14 @@
 
 *{ box-sizing: border-box; }
 html, body{ height: 100%; }
+
 body{
   margin: 0;
   font-family: var(--font);
-  background: radial-gradient(1100px 600px at 20% 10%, rgba(43,108,255,0.22), transparent 60%),
-              radial-gradient(1000px 650px at 85% 20%, rgba(65,199,255,0.16), transparent 58%),
-              linear-gradient(180deg, #040714, #060A16 40%, #040714);
+  background:
+    radial-gradient(1100px 600px at 20% 10%, rgba(43,108,255,0.22), transparent 60%),
+    radial-gradient(1000px 650px at 85% 20%, rgba(65,199,255,0.18), transparent 58%),
+    linear-gradient(180deg, var(--bg), #0A1022 40%, var(--bg));
   color: var(--text);
   line-height: 1.55;
 }
@@ -200,11 +205,12 @@ h1{
 }
 
 .card{
-  background: var(--panel);
+  background: linear-gradient(180deg, rgba(255,255,255,0.085), rgba(255,255,255,0.06));
   border: 1px solid var(--line);
   border-radius: var(--radius2);
   box-shadow: var(--shadow);
 }
+
 .card .pad{ padding: 18px; }
 
 .photo-card{
@@ -262,7 +268,7 @@ h1{
 .feature{
   padding: 16px;
   border-radius: var(--radius);
-  background: var(--panel2);
+  background: rgba(255,255,255,0.095);
   border: 1px solid var(--line);
 }
 .feature h3{
