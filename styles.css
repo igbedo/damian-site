@@ -223,10 +223,10 @@ h1{
 
 .photo-card img{
   width: 100%;
-  max-height: 420px;
-  object-fit: contain;
-  background: #0B1024;
-  padding: 10px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%; /* adjust crop focus */
+  display: block;
 }
 
 
