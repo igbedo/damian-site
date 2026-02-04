@@ -46,7 +46,7 @@ a:hover{ opacity: 0.92; }
   top: 0;
   z-index: 50;
   backdrop-filter: blur(12px);
-  background: rgba(7, 11, 24, 0.65);
+  background: rgba(11, 16, 36, 0.72);
   border-bottom: 1px solid var(--line);
 }
 
