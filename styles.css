@@ -213,6 +213,15 @@ h1{
 
 .card .pad{ padding: 18px; }
 
+/* Crop higher (less forehead space) */
+.crop-up img{
+  object-position: center 20%;
+}
+
+/* Crop even higher if needed */
+.crop-up-more img{
+  object-position: center 10%;
+}
 
 .photo-card{
   overflow: hidden;
