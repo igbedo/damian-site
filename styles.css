@@ -81,13 +81,15 @@ a:hover{ opacity: 0.92; }
 
 .menu{
   display:flex;
-  flex-wrap: wrap;
-  align-items:center;
-  gap: 10px;
-  justify-content:flex-end;
+  flex-wrap: nowrap;          /* KEY: do not wrap */
+  align-items: center;
+  gap: 8px;                   /* tighter spacing */
+  justify-content: flex-end;
 }
 
 .menu a{
+  white-space: nowrap;        /* KEY: keep each label on one line */
+  line-height: 1;             /* helps vertical alignment */
   padding: 8px 10px;
   border-radius: 999px;
   border: 1px solid transparent;
@@ -107,6 +109,8 @@ a:hover{ opacity: 0.92; }
 }
 
 .btn{
+  line-height: 1;             /* helps alignment */
+  padding: 9px 12px;          /* match your pills more closely */
   display:inline-flex;
   align-items:center;
   justify-content:center;
