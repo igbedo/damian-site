@@ -61,7 +61,7 @@ a:hover{ opacity: 0.92; }
 .brand{
   display:flex;
   align-items:center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 800;
   letter-spacing: 0.2px;
 }
@@ -88,13 +88,14 @@ a:hover{ opacity: 0.92; }
 }
 
 .menu a{
-  padding: 9px 12px;
+  padding: 8px 10px;
   border-radius: 999px;
   border: 1px solid transparent;
   color: var(--muted);
   font-weight: 600;
   font-size: 14px;
 }
+
 .menu a.active{
   color: var(--text);
   border-color: var(--line);
