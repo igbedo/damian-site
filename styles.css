@@ -548,3 +548,77 @@ textarea{ min-height: 120px; resize: vertical; }
   display: block;
 }
 
+/* --- Mobile Hamburger Nav --- */
+.nav-toggle{
+  display:none; /* visible only on mobile */
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.05);
+  cursor: pointer;
+  align-items:center;
+  justify-content:center;
+  gap: 6px;
+}
+.nav-toggle span{
+  display:block;
+  width: 18px;
+  height: 2px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 999px;
+}
+
+/* Overlay behind mobile menu */
+.nav-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 40; /* below topbar z-index 50 */
+}
+
+/* Mobile behavior */
+@media (max-width: 900px){
+  /* Hide subtitle to save space */
+  .brand small{ display:none; }
+
+  /* Show hamburger */
+  .nav-toggle{ display:inline-flex; }
+
+  /* Convert menu to dropdown drawer */
+  .menu{
+    position: fixed;
+    top: 64px;               /* below top bar */
+    right: 14px;
+    left: 14px;
+    display: none;           /* hidden until opened */
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: rgba(11,16,36,0.95);
+    box-shadow: var(--shadow);
+    z-index: 60;             /* above topbar */
+  }
+
+  .menu.open{ display:flex; }
+
+  .menu a{
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+  }
+
+  /* Make contact button full-width */
+  .menu .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Prevent background scroll when menu open */
+  body.nav-open{
+    overflow: hidden;
+  }
+}
