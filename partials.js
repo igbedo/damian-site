@@ -3,14 +3,19 @@
     const el = document.querySelector(selector);
     if (!el) return;
     const res = await fetch(url, { cache: "no-cache" });
-    el.outerHTML = await res.text();
+    const html = await res.text();
+    el.outerHTML = html;
   }
 
-  // Inject header/footer
-  await inject("#header-slot", "/header.html");
-  await inject("#footer-slot", "/footer.html");
+  // Use RELATIVE paths (more reliable on static hosting)
+  await inject("#header-slot", "header.html");
+  await inject("#footer-slot", "footer.html");
 
-  // After header is injected, wire up hamburger
+  // Set footer year (scripts inside injected HTML won't run)
+  const y = document.getElementById("y");
+  if (y) y.textContent = new Date().getFullYear();
+
+  // Wire hamburger (must be done after header injection)
   const btn = document.querySelector(".nav-toggle");
   const menu = document.getElementById("site-menu");
   const overlay = document.getElementById("navOverlay");
@@ -41,11 +46,10 @@
     window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
   }
 
-  // Set active nav link automatically
+  // Auto-highlight active link
   const path = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll('#site-menu a').forEach(a => {
-    const href = a.getAttribute("href");
-    if (href === path) a.classList.add("active");
+    if (a.getAttribute("href") === path) a.classList.add("active");
   });
 })();
 

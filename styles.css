@@ -659,3 +659,23 @@ textarea{ min-height: 120px; resize: vertical; }
 .nav-toggle.open span:nth-child(3){
   transform: translateY(-7px) rotate(-45deg);
 }
+
+
+/* Hamburger hidden by default (desktop/tablet) */
+.nav-toggle{ display:none; }
+
+/* Mobile */
+@media (max-width: 900px){
+  .nav-toggle{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  /* Your mobile menu drawer should only show when open */
+  .menu{ display:none !important; }
+  .menu.open{ display:flex !important; }
+}
+
