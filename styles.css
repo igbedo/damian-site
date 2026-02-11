@@ -549,6 +549,7 @@ textarea{ min-height: 120px; resize: vertical; }
 }
 
 /* --- Mobile Hamburger Nav --- */
+
 .nav-toggle{
   display:none;
   width: 44px;
@@ -558,13 +559,29 @@ textarea{ min-height: 120px; resize: vertical; }
   background: rgba(255,255,255,0.05);
   cursor: pointer;
 
-  /* KEY FIX */
   display: flex;
-  flex-direction: column;     /* stack vertically */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;                   /* spacing between lines */
+  gap: 5px;
+
+  transition: background .2s ease, box-shadow .2s ease;
 }
+
+.nav-toggle:hover{
+  background: rgba(65,199,255,0.08);
+  box-shadow: 0 0 18px rgba(65,199,255,0.25);
+}
+
+.nav-toggle span{
+  width: 20px;
+  height: 2px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 999px;
+  display:block;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
 
 .nav-toggle span{
   width: 20px;
@@ -627,4 +644,18 @@ textarea{ min-height: 120px; resize: vertical; }
   body.nav-open{
     overflow: hidden;
   }
+}
+
+
+/* Animate to X when menu is open */
+.nav-toggle.open span:nth-child(1){
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2){
+  opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3){
+  transform: translateY(-7px) rotate(-45deg);
 }
