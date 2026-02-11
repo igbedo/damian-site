@@ -550,24 +550,30 @@ textarea{ min-height: 120px; resize: vertical; }
 
 /* --- Mobile Hamburger Nav --- */
 .nav-toggle{
-  display:none; /* visible only on mobile */
+  display:none;
   width: 44px;
   height: 44px;
   border-radius: 12px;
   border: 1px solid var(--line);
   background: rgba(255,255,255,0.05);
   cursor: pointer;
-  align-items:center;
-  justify-content:center;
-  gap: 6px;
+
+  /* KEY FIX */
+  display: flex;
+  flex-direction: column;     /* stack vertically */
+  align-items: center;
+  justify-content: center;
+  gap: 4px;                   /* spacing between lines */
 }
+
 .nav-toggle span{
-  display:block;
-  width: 18px;
+  width: 20px;
   height: 2px;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   border-radius: 999px;
+  display:block;
 }
+
 
 /* Overlay behind mobile menu */
 .nav-overlay{
