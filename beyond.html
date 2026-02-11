@@ -8,24 +8,7 @@
 </head>
 <body>
 
-<header class="topbar">
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <span class="mark"></span>
-      <span>Damian Igbe, PhD<small>AI • Cybersecurity • Cloud Operations</small></span>
-    </a>
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="training.html">Training</a>
-      <a href="speaking.html">Speaking</a>
-      <a href="corporate.html">Corporate</a>
-      <a href="certifications.html">Certifications</a>
-      <a href="about.html">About</a>
-      <a class="active" href="beyond.html">Beyond Tech</a>
-      <a href="contact.html" class="btn primary">Contact</a>
-    </nav>
-  </div>
-</header>
+<div id="header-slot"><!--HEADER--></div>
 
 <main class="section">
   <div class="container">
@@ -263,14 +246,11 @@
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container footgrid">
-    <div>© <span id="y"></span> Damian Igbe</div>
-    <div><a href="contact.html">Contact</a></div>
-  </div>
-</footer>
+<div id="footer-slot"><!--FOOTER--></div>
 
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script src="/partials.js"></script>
+
+
 </body>
 </html>
 

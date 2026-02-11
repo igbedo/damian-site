@@ -15,78 +15,6 @@
     </div>
   </div>
 
-  <header class="topbar">
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <span class="mark"></span>
-      <span>
-        Damian Igbe, PhD
-        <small>AI • Cybersecurity • Cloud Operations</small>
-      </span>
-    </a>
-
-    <!-- Hamburger button (shows on mobile) -->
-    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="menu" id="site-menu">
-      <a class="active" href="index.html">Home</a>
-      <a href="training.html">Training</a>
-      <a href="speaking.html">Speaking</a>
-      <a href="corporate.html">Corporate</a>
-      <a href="certifications.html">Certifications</a>
-      <a href="instructor.html">Instructors</a>
-      <a href="about.html">About</a>
-      <a href="beyond.html">Beyond Tech</a>
-      <a href="contact.html" class="btn primary">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<!-- Optional overlay for mobile menu -->
-<div class="nav-overlay" id="nav-overlay" hidden></div>
-
-<script>
-  (function () {
-    const btn = document.querySelector(".nav-toggle");
-    const menu = document.getElementById("site-menu");
-    const overlay = document.getElementById("nav-overlay");
-    if (!btn || !menu || !overlay) return;
-
-    function openMenu() {
-      menu.classList.add("open");
-      btn.classList.add("open"); 
-      overlay.hidden = false;
-      btn.setAttribute("aria-expanded", "true");
-      document.body.classList.add("nav-open");
-    }
-
-    function closeMenu() {
-      menu.classList.remove("open");
-      btn.classList.remove("open");
-      overlay.hidden = true;
-      btn.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("nav-open");
-    }
-
-    btn.addEventListener("click", () => {
-      menu.classList.contains("open") ? closeMenu() : openMenu();
-    });
-
-    overlay.addEventListener("click", closeMenu);
-
-    // Close after clicking a link (better UX)
-    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
-
-    // Escape key closes menu
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-  })();
-</script>
-
-
   <main>
     <section class="hero">
       <div class="container hero-grid">
@@ -221,21 +149,6 @@
 
   </main>
 
-  <footer class="footer">
-    <div class="container footgrid">
-      <div>© <span id="y"></span> Damian Igbe, PhD • AI Security Copilot Framework™</div>
-      <div>
-        <a href="training.html">Training</a> ·
-        <a href="speaking.html">Speaking</a> ·
-        <a href="corporate.html">Corporate</a> ·
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
 
