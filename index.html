@@ -1,156 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Damian Igbe, PhD — Operational AI for Cybersecurity & Cloud Teams</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damian Igbe, PhD | AI & GPU Infrastructure Architect</title>
+    <style>
+        :root {
+            --primary-bg: #0a0a0c;
+            --accent-blue: #00e5ff;
+            --text-main: #e0e0e0;
+            --text-dim: #a0a0a0;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 12, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        .hero {
+            padding: 10rem 2rem;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0c 100%);
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #fff, var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 750px;
+            margin: 0 auto 3rem;
+        }
+
+        .cta-button {
+            background: var(--accent-blue);
+            color: #000;
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+        }
+
+        .section {
+            padding: 8rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            color: var(--accent-blue);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .impact-number {
+            font-size: 3.5rem;
+            color: var(--accent-blue);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            padding: 5rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { display: none; }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="banner">
-    <div class="container">
-      <p><strong>Now Enrolling:</strong> Advanced AI for Security & Cloud Professionals — limited seats to keep sessions interactive.</p>
-      <a href="training.html">Learn more →</a>
+<header>
+    <div class="logo">DAMIAN IGBE <span style="color: var(--accent-blue);">.</span></div>
+    <nav>
+        <a href="#architecture">Architecture</a>
+        <a href="#framework">Framework</a>
+        <a href="#impact">Impact</a>
+        <a href="https://www.linkedin.com/in/damianigbe" target="_blank">LinkedIn</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Architecting the AI Factory</h1>
+    <p>Designing high-density GPU clusters and secure AI-native infrastructure for the next era of enterprise intelligence.</p>
+    <a href="https://www.linkedin.com/in/damianigbe" class="cta-button">Consult with an Architect</a>
+</section>
+
+<section class="section" id="architecture">
+    <h2 style="text-align: center; margin-bottom: 4rem; font-size: 2.5rem;">Infrastructure Specializations</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>GPU Clusters</h3>
+            <p>Full-stack design of multi-node H100/B200 pods, optimizing for power density, thermal management, and raw compute throughput.</p>
+        </div>
+        <div class="card">
+            <h3>Unified Fabric</h3>
+            <p>Implementing non-blocking InfiniBand NDR and NVLink topologies to eliminate latency in large-scale distributed training.</p>
+        </div>
+        <div class="card">
+            <h3>AI Orchestration</h3>
+            <p>Advanced Kubernetes and Slurm environments featuring topology-aware scheduling and automated GPU slicing (MIG).</p>
+        </div>
     </div>
-  </div>
-<div id="header-slot"><!--HEADER--></div>
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
+</section>
 
+<section class="section" id="framework" style="background: var(--glass-bg); border-radius: 30px;">
+    <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: 2.5rem;">The AI Security Copilot Framework™</h2>
+        <p style="color: var(--text-dim); font-size: 1.2rem;">Sovereign AI requires more than just compute; it requires governance. I integrate security into the silicon layer, ensuring your private data remains protected within your high-performance environment.</p>
+    </div>
+</section>
+
+<section class="section" id="impact">
+    <h2 style="text-align: center; margin-bottom: 4rem; font-size: 2.5rem;">Architectural Benchmarks</h2>
+    <div class="grid" style="text-align: center;">
         <div>
-          <div class="kicker"><span class="dot"></span> AI Security Copilot Framework™</div>
-          <h1>Operational AI for Modern Cybersecurity & Cloud Teams</h1>
-          <p class="lead">
-            Practical training, workshops, and speaking that help professionals and organizations
-            <b>operationalize AI</b> in real workflows—incident analysis, cloud/IAM reviews, DevSecOps checks,
-            and leadership-ready reporting.
-          </p>
-
-          <div class="hero-cta">
-            <a class="btn primary" href="training.html">Explore Training</a>
-            <a class="btn" href="corporate.html">Corporate Enablement</a>
-            <a class="btn" href="speaking.html">Book a Talk</a>
-            <a class="btn ghost" href="certifications.html">View Certifications →</a>
-          </div>
-
-          <p class="tagline">AI-assisted workflows. Human-led decisions.</p>
-
-          <hr class="sep" />
-
-          <div class="grid-3">
-            <div class="feature">
-              <h3>Workflow-first</h3>
-              <p>AI integration into existing security & cloud processes—not tool demos.</p>
-            </div>
-            <div class="feature">
-              <h3>Human validation</h3>
-              <p>Clear checkpoints for oversight, accountability, and responsible use.</p>
-            </div>
-            <div class="feature">
-              <h3>Repeatable patterns</h3>
-              <p>Templates, prompts, and operational workflows you can reuse immediately.</p>
-            </div>
-          </div>
+            <div class="impact-number">72%</div>
+            <p>Training Latency Reduction</p>
         </div>
-
-
-        <aside class="photo-card crop-up">
-          <img src="images/damian-igbe-new.png" alt="Damian Igbe portrait placeholder" />
-          <div class="photo-meta">
-            <b>Damian Igbe, PhD</b>
-            <span>Speaker • Trainer • Advisor on AI-enabled security & cloud operations</span>
-          </div>
-        </aside>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split">
-        <div class="card">
-          <div class="pad">
-            <h2>What I help teams do</h2>
-            <p>Move from AI experimentation to operational adoption—safely and practically.</p>
-            <ul class="list">
-              <li>Accelerate investigations (summaries, pattern finding, first-pass documentation)</li>
-              <li>Improve cloud security & IAM reviews (explain configs, highlight risks, draft findings)</li>
-              <li>Strengthen DevSecOps workflows (assist checks, reviews, and reporting)</li>
-              <li>Communicate security insights clearly to leadership</li>
-            </ul>
-          </div>
+        <div>
+            <div class="impact-number">58%</div>
+            <p>Model FLOPs Utilization (MFU)</p>
         </div>
-
-        <div class="card">
-          <div class="pad">
-            <h2>The AI Security Copilot Framework™</h2>
-            <p>A structured, human-led method for integrating AI into real security and cloud workflows.</p>
-            <div class="grid-2">
-              <div class="feature">
-                <h3>1) Workflow-driven design</h3>
-                <p>Start with real processes—investigations, reviews, reporting.</p>
-              </div>
-              <div class="feature">
-                <h3>2) AI as an analytical assistant</h3>
-                <p>Summaries, explanations, drafts—faster understanding.</p>
-              </div>
-              <div class="feature">
-                <h3>3) Human validation</h3>
-                <p>Review, verify, and decide with accountability.</p>
-              </div>
-              <div class="feature">
-                <h3>4) Repeatable workflow patterns</h3>
-                <p>Standardized templates and reusable prompts.</p>
-              </div>
-              <div class="feature">
-                <h3>5) Governed AI use</h3>
-                <p>Policy-aware and responsible adoption.</p>
-              </div>
-              <div class="feature">
-                <h3>Outcome</h3>
-                <p>Reduced repetitive work, better clarity, scalable expertise.</p>
-              </div>
-            </div>
-          </div>
+        <div>
+            <div class="impact-number">40%</div>
+            <p>Lower Infrastructure TCO</p>
         </div>
+    </div>
+</section>
 
-      </div>
-    </section>
+<footer>
+    <p>&copy; 2026 Damian Igbe, PhD. AI & GPU Infrastructure Architect.</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.5;">Designed for performance. Built for scale.</p>
+</footer>
 
-    <section class="section">
-      <div class="container grid-3">
-        <div class="card">
-          <div class="pad">
-            <span class="badge">Free Resource</span>
-            <h2>AI Security Copilot Starter Kit</h2>
-            <p>Practical prompts + a simple workflow you can use immediately.</p>
-            <a class="btn primary" href="contact.html">Request the Starter Kit</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="pad">
-            <span class="badge">Training</span>
-            <h2>Advanced Program</h2>
-            <p>Build repeatable AI-assisted workflows for security and cloud work.</p>
-            <a class="btn primary" href="training.html">View Program</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="pad">
-            <span class="badge">Teams</span>
-            <h2>Corporate Enablement</h2>
-            <p>Workshops and multi-week engagements tailored to your environment.</p>
-            <a class="btn primary" href="corporate.html">Explore Options</a>
-          </div>
-        </div>
-      </div>
-    </section>
-<div id="footer-slot"><!--FOOTER--></div>
+<script>
+    // Reveal animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
 
-<script src="/partials.js"></script>
-  </main>
+    document.querySelectorAll('.card').forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease-out';
+        observer.observe(card);
+    });
+</script>
 
 </body>
 </html>
-
